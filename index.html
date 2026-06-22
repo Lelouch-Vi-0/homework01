@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>倍元素週期表</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header>
+      <h1>倍元素週期表</h1>
+      <p>輸入一個數字，週期表會高亮所有原子序數為該數字倍數的元素。</p>
+    </header>
+
+    <section class="controls">
+      <label for="multipleInput">倍數：</label>
+      <input id="multipleInput" type="number" min="1" placeholder="例如 2" />
+      <button id="clearButton" type="button">清除</button>
+      <p class="hint">例如輸入 2 會高亮 2 的倍數元素。</p>
+    </section>
+
+    <section class="periodic-shell">
+      <div class="table-grid" id="periodicTable"></div>
+    </section>
+
+    <section class="legend">
+      <h2>元素分類</h2>
+      <div class="legend-items">
+        <span class="legend-chip alkali">鹼金屬</span>
+        <span class="legend-chip alkaline">鹼土金屬</span>
+        <span class="legend-chip transition">過渡金屬</span>
+        <span class="legend-chip post-transition">後過渡金屬</span>
+        <span class="legend-chip metalloid">類金屬</span>
+        <span class="legend-chip nonmetal">非金屬</span>
+        <span class="legend-chip halogen">鹵素</span>
+        <span class="legend-chip noble-gas">稀有氣體</span>
+        <span class="legend-chip lanthanoid">鑭系元素</span>
+        <span class="legend-chip actinoid">錒系元素</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
