@@ -8,142 +8,95 @@
 </head>
 <body>
   <header>
-    <h1>元素週期表 • 背誦練習</h1>
+    <h1>⚛️ 元素週期表 • 背誦練習</h1>
     <div class="controls">
-      <input id="search" placeholder="搜尋：符號或名稱（例如 H 或 Hydrogen）">
-      <input id="userName" placeholder="你的名字（用於記錄）" style="padding:8px;border-radius:6px;border:1px solid #d7e0ef">
-      <button id="autoFillBtn">自動填入（API）</button>
-      <button id="flashBtn">開始背誦 (Flashcards)</button>
-      <button id="quizBtn">小測驗 (Quiz)</button>
-      <button id="examBtn">考試 (Exam)</button>
-      <button id="precipBtn">沉澱表 (Precipitation)</button>
+      <input id="search" placeholder="🔍 搜尋元素...">
+      <input id="userName" placeholder="👤 你的名字">
+      <button id="autoFillBtn">🎲 隨機選項</button>
+      <button id="flashBtn">📇 背誦卡</button>
+      <button id="quizBtn">❓ 小測驗</button>
+      <button id="examBtn">📝 考試</button>
+      <button id="todoBtn">📝 To Do List</button>
+      <button id="precipBtn">⚗️ 沉澱表</button>
     </div>
   </header>
 
   <main>
     <section id="table-container"></section>
+
     <section id="flashcard" class="hidden">
       <div id="card">
         <div id="card-front"></div>
         <div id="card-back" class="hidden"></div>
       </div>
       <div class="flash-controls">
-        <button id="prev">上個</button>
-        <button id="reveal">翻面</button>
-        <button id="next">下個</button>
-        <button id="saveProgress">儲存進度</button>
-        <button id="exitFlash">離開</button>
+        <button id="prev">⬅️ 上一個</button>
+        <button id="reveal">🔄 翻面</button>
+        <button id="next">下一個 ➡️</button>
+        <button id="saveProgress">💾 儲存進度</button>
+        <button id="exitFlash">❌ 離開</button>
       </div>
     </section>
-    <section id="precip" class="hidden">
-      <div id="precip-area">
-        <div class="precip-header">
-          <div>沉澱表（常見鹽類溶解性）</div>
-          <div><input id="precip-search" placeholder="搜尋離子或化學式（例如 Cl-, AgCl）"></div>
-        </div>
-        <div id="precip-table"></div>
-        <div class="precip-controls"><button id="exitPrecip">離開沉澱表</button></div>
-      </div>
-    </section>
-    <section id="quiz" class="hidden">
-      <div id="quiz-area"></div>
-      <div class="quiz-controls">
-        <button id="exitQuiz">離開小測</button>
-      </div>
-    </section>
-    <section id="exam" class="hidden">
-      <div id="exam-area">
-        <div class="exam-header">
-          <div>考試：10 題，多選</div>
-          <div id="exam-timer">剩餘時間：--:--</div>
-        </div>
-        <div id="exam-questions"></div>
-        <div class="exam-controls">
-          <button id="startExam">開始考試</button>
-          <button id="submitExam" class="hidden">交卷</button>
-          <button id="saveExamResult" class="hidden">儲存成績</button>
-          <button id="exitExam">離開考試</button>
-        </div>
-        <div id="exam-result" class="hidden"></div>
-      </div>
-    </section>
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>元素週期表 - 背誦練習</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>元素週期表 • 背誦練習</h1>
-    <div class="controls">
-      <input id="search" placeholder="搜尋：符號或名稱（例如 H 或 Hydrogen）">
-      <input id="userName" placeholder="你的名字（用於記錄）" style="padding:8px;border-radius:6px;border:1px solid #d7e0ef">
-      <button id="autoFillBtn">自動填入（API）</button>
-      <button id="flashBtn">開始背誦 (Flashcards)</button>
-      <button id="quizBtn">小測驗 (Quiz)</button>
-      <button id="examBtn">考試 (Exam)</button>
-      <button id="precipBtn">沉澱表 (Precipitation)</button>
-    </div>
-  </header>
 
-  <main>
-    <section id="table-container"></section>
-    <section id="flashcard" class="hidden">
-      <div id="card">
-        <div id="card-front"></div>
-        <div id="card-back" class="hidden"></div>
-      </div>
-      <div class="flash-controls">
-        <button id="prev">上個</button>
-        <button id="reveal">翻面</button>
-        <button id="next">下個</button>
-        <button id="saveProgress">儲存進度</button>
-        <button id="exitFlash">離開</button>
-      </div>
-    </section>
     <section id="precip" class="hidden">
       <div id="precip-area">
         <div class="precip-header">
-          <div>沉澱表（常見鹽類溶解性）</div>
-          <div><input id="precip-search" placeholder="搜尋離子或化學式（例如 Cl-, AgCl）"></div>
+          <div>⚗️ 沉澱表（常見鹽類溶解性）</div>
+          <input id="precip-search" placeholder="🔍 搜尋離子或化學式...">
         </div>
         <div id="precip-table"></div>
-        <div class="precip-controls"><button id="exitPrecip">離開沉澱表</button></div>
+        <div class="precip-controls">
+          <button id="exitPrecip">❌ 離開沉澱表</button>
+        </div>
       </div>
     </section>
+
     <section id="quiz" class="hidden">
       <div id="quiz-area"></div>
       <div class="quiz-controls">
-        <button id="exitQuiz">離開小測</button>
+        <button id="exitQuiz">❌ 離開小測</button>
       </div>
     </section>
+
     <section id="exam" class="hidden">
       <div id="exam-area">
         <div class="exam-header">
-          <div>考試：10 題，多選</div>
-          <div id="exam-timer">剩餘時間：--:--</div>
+          <div>📝 考試：10 題，多選題</div>
+          <div id="exam-timer">⏱️ 剩餘時間：--:--</div>
         </div>
         <div id="exam-questions"></div>
         <div class="exam-controls">
-          <button id="startExam">開始考試</button>
-          <button id="submitExam" class="hidden">交卷</button>
-          <button id="saveExamResult" class="hidden">儲存成績</button>
-          <button id="exitExam">離開考試</button>
+          <button id="startExam">▶️ 開始考試</button>
+          <button id="submitExam" class="hidden">📤 交卷</button>
+          <button id="saveExamResult" class="hidden">💾 儲存成績</button>
+          <button id="exitExam">❌ 離開考試</button>
         </div>
         <div id="exam-result" class="hidden"></div>
->>>>>>> a47024d (Add exam and precipitation features; Apps Script placeholders)
+      </div>
+    </section>
+
+    <section id="todo" class="hidden">
+      <div class="todo-card">
+        <div class="todo-header">
+          <div>📝 To Do List</div>
+          <button id="exitTodo">❌ 關閉</button>
+        </div>
+        <div class="todo-inputs">
+          <input id="todoInput" placeholder="新增待辦事項...">
+          <button id="addTodoBtn">＋ 新增</button>
+        </div>
+        <div id="todoList" class="todo-list"></div>
+        <div class="todo-actions">
+          <button id="clearTodos">🗑️ 清空待辦</button>
+        </div>
       </div>
     </section>
   </main>
 
-<<<<<<< HEAD
-=======
-  <footer>資料來源：Periodic Table JSON（網路載入）</footer>
+  <footer>
+    ✨ 資料來源：Periodic Table JSON（網路載入）
+  </footer>
 
->>>>>>> a47024d (Add exam and precipitation features; Apps Script placeholders)
   <script src="script.js"></script>
 </body>
 </html>
